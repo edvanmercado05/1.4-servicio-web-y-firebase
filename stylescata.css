@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Lilita+One&family=Oswald:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+/*  ------------------------- menu -------------------------*/
+.menu{
+    background-color: #808080;
+    
+}
+
+.menu a{
+    text-decoration: none;
+    color: yellow;
+    
+}
+
+.menu a:hover{
+    background-color: yellow;
+    color:#808080 ;
+}
+
+
+/* ------------------------- cuerpo basico ------------------------------ */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, section, footer {
+    margin: 20px;
+}
+
+header {
+    background-color: #1b62b3;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+nav {
+    background-color: grey;
+    color: white;
+    text-align: center;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* ------------------------ catalago --------------------------------------------- */
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* --------------------- disponible--------------------------------------------- */
+.item {
+    position: relative; /* Añadido para que la posición de ::after sea relativa a .item */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item::after {
+    content: "Disponible";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 201, 17, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.item:hover::after {
+    opacity: 1;
+}
+
+/* ---------------------No disponible--------------------------------------------- */
+.noitem {
+    position: relative; /* Añadido para que la posición de ::after sea relativa a .item */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+
+.noitem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.noitem::after {
+    content: "No Disponible";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(243, 6, 6, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.noitem:hover::after {
+    opacity: 1;
+}
+
+/* ---------------------ultimos--------------------------------------------- */
+.ultimos {
+    position: relative; /* Añadido para que la posición de ::after sea relativa a .item */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+
+.ultimos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ultimos::after {
+    content: "Ultimos dias";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(228, 207, 18, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.ultimos:hover::after {
+    opacity: 1;
+}
+
+
+ /* Estilo para la galería */
+ .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Estilo para cada imagen en la galería */
+.gallery img {
+    width: 250px; /* Puedes ajustar el tamaño de las imágenes según tus necesidades */
+    height: 350px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilo para la descripción que se mostrará al pasar el ratón */
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.image-description {
+    text-align: center;
+    font-size: 20px;
+
+    display: none;
+    position: absolute;
+    background: rgba(235, 72, 8, 0.9);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.gallery img:hover + .image-description {
+    display: block;
+}
+
+#logout{
+
+   
+    color: #0cef0c;
+
+}

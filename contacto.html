@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="stylescontac.css">
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('FBnPiGKswU6-uLLfD') </script>
+
+<script src="./app/logout.js" type="module"></script>
+
+</head>
+<body>
+
+  
+    
+    <header>
+        <h1>Biblioteca Virtual</h1>
+    </header>
+
+  
+    <nav>
+        <div class="menu">
+        <ul>
+            
+            <li><a href="menu.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="resumenes.html">Sinopsis</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a class="nav-link logged-in" href="#" id="logout">Logout</a> <!-- cerrar sesion -->
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <section>
+      <p><b>Siempre es un placer poder escucharte.</b>  </p>
+    </section>
+    
+    <form id="container">
+        <div class="input">
+          <label for="from_name">Nombre:</label>
+          <input type="text" name="from_name" id="from_name" placeholder="¿Con quien tenemos el gusto?">
+        </div>
+        
+        <div class="input">
+          <label for="email_id">Correo electronico:</label>
+          <input type="text" name="email_id" id="email_id" placeholder="email de contacto">
+        </div>
+        
+        <div class="input">
+          <label for="message">Mensaje:</label>
+          <input type="text"  name="message" id="message" placeholder="Sugerencias, Dudas... no dudes en escribirnos ">
+        </div>
+      
+        <input type="submit" id="button" value="Enviar Correo" >
+      </form>
+      
+
+    <footer>
+        <p>&copy; 2024 Biblioteca Virtual Teocalli</p>
+    </footer>
+    
+    <script src="js/contacto.js"></script>
+</body>
+</html>

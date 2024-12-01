@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylescata.css">
+    <link rel="stylesheet" href="stylesbase.css">
+    <title>Catalogo</title>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
+
+  <script src="./app/logout.js" type="module"></script>
+
+   
+  
+  
+
+</head>
+<body>
+
+    
+    
+    <header>
+        <h1>Biblioteca Virtual Teocalli</h1>
+    </header>
+
+
+    <nav>
+        <div class="menu">
+        <ul>
+            
+            <li><a href="menu.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="resumenes.html">Sinopsis</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a class="nav-link logged-in" href="#" id="logout">Logout</a> <!-- cerrar sesion -->
+            </li>
+        </ul>
+    </div>
+    </nav>
+    
+
+    <h1>Catálogo de Libros</h1>
+
+    <div class="catalog">
+
+        <div class="item">
+            <img src="imagenes/libro1.jpg" alt="Imagen 1">
+        </div>
+        <div class="item">
+            <img src="imagenes/libro2.jpeg" alt="Imagen 2">
+        </div>
+        <div class="item">
+            <img src="imagenes/libro3.jpg" alt="Imagen 3">
+         
+        </div>
+        <div class="ultimos">
+            <img src="imagenes/libro4.jpg" alt="Imagen 3">
+           
+        </div>
+        <div class="noitem">
+            <img src="imagenes/libro5.jpeg" alt="Imagen 3">
+            
+        </div>
+        <div class="item">
+            <img src="imagenes/libro6.jpg" alt="Imagen 3">
+         
+        </div>
+        <div class="ultimos">
+            <img src="imagenes/libro7.jpg" alt="Imagen 3">
+           
+        </div>
+        <div class="item">
+            <img src="imagenes/libro8.jpg" alt="Imagen 3">
+        
+        </div>
+        <div class="item">
+            <img src="imagenes/libro9.jpg" alt="Imagen 3">
+           
+        </div>
+        <div class="noitem">
+            <img src="imagenes/libro10.jpg" alt="Imagen 3">
+            
+        </div>
+    </div>
+
+    <h1><i> --- Proximas entregas ---</i></h1>
+
+    <div class="gallery">
+        <div>
+            <img src="imagenes/libro11.jpg" alt="Imagen 1">
+            <div class="image-description">
+                La historia de Rondha<br> 
+                Carmen Gonzalez<br>
+                Pasta dura<br>
+                Proximamente Audio libro
+
+            </div>
+        </div>
+        <div>
+            <img src="imagenes/libro12.jpg" alt="Imagen 2">
+            <div class="image-description">
+                La historia de Rondha<br> 
+                Carmen Gonzalez<br>
+                Pasta dura<br>
+                Proximamente Audio libro
+            </div>
+        </div>
+        <div>
+            <img src="imagenes/libro13.jpg" alt="Imagen 2">
+            <div class="image-description">
+                Harry Potter<br> 
+                J.K. Rowling<br>
+                Pasta blanda<br>
+                15% de descuento
+            </div>
+        </div>
+        <div>
+            <img src="imagenes/libro14.jpg" alt="Imagen 2">
+            <div class="image-description">
+                Perfume<br> 
+                Patrick Suskiod<br>
+                Pasta blanda<br>
+                Nueva edicion
+            </div>
+        </div>
+        <div>
+            <img src="imagenes/libro15.jpg" alt="Imagen 2">
+            <div class="image-description">
+                ¿Como nos arreglamos?<br> 
+                Erenesto Canales Santos<br>
+                Pasta blanda<br>
+                10% de descuento
+            </div>
+        </div>
+        <div>
+            <img src="imagenes/libro16.jpg" alt="Imagen 2">
+            <div class="image-description">
+                Donde los arboles cantan<br> 
+                Laura Gallego<br>
+                Pasta dura<br>
+                Proximamente Audio libro
+            </div>
+        </div>
+        <div>
+            <img src="imagenes/libro17.jpg" alt="Imagen 2">
+            <div class="image-description">
+                El paseo de Jane<br> 
+                Nueva edicion<br>
+                Pasta blanda<br>
+                Proximamente Audio libro
+            </div>
+        </div>
+        
+
+    </div>
+
+    <h1>Informacion sobre nuestros Libros</h1>
+
+  <form id="formulario-libro">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" required>
+    <label for="autor">Autor:</label>
+    <input type="text" id="autor" required>
+    <label for="tipo">Tipo:</label>
+    <input type="text" id="tipo" required>
+    <label for="estado">Estado:</label>
+    <input type="text" id="estado" required>
+
+    <button type="button" onclick="agregarLibro()">Agregar Libro</button>
+  </form>
+
+  <table id="tabla-libros">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+    
+
+
+         <footer>
+            <p>&copy; 2024 Biblioteca Virtual Teocalli</p>
+        </footer>
+
+
+        <!-- -------------------------------------- base de datos ----------------------------------- -->
+         <!-- Scripts -->
+  
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/crud-operations.js"></script>
+  <script type="module" src="js/main.js"></script>
+
+    </body>
+</html>
